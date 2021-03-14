@@ -1,0 +1,41 @@
+.send-result-help-text {
+    font-size: 18px;
+    font-weight: 100
+}
+.send-email-content {
+    width: 400px;
+    padding: 20px;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    
+}
+.send-email-content > div {
+    margin: auto;
+    display: flex;
+    justify-content: center
+}
+.send-email-content input {
+    font-size: 16px;
+    color: #fff;
+}
+.question-results-content {
+    margin-top: -20px
+}
+.question-results-content input{
+    outline: none;
+    border: none;
+    background-color: #282c35;
+    text-align: center;
+}
+.send-email-content button {
+    color: #fff;
+    background-color: #21272c;
+    font-weight: bold;
+    transition-duration: 0.5s;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-top: 20px;
+    cursor: pointer;
+    outline: none
+}

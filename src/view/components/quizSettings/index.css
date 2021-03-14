@@ -1,0 +1,35 @@
+.quiz-settings {
+    width: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10px;
+    border-bottom-right-radius: 30px;
+    position: fixed;
+}
+.quiz-settings > div:last-of-type {
+    background-color: #09c372;
+    border-bottom-right-radius: 30px;
+
+}
+.quiz-settings > div {
+    box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    background-color: #2a2e35;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+.quiz-settings > div:hover {
+    transform:  scale(0.9) translate(0px, 10px);
+}
+
+.light-and-dark button {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 13px;
+    font-size: 25px;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    color: #b2becd;
+}

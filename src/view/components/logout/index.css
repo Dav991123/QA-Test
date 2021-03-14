@@ -1,0 +1,53 @@
+.logout-button-content {
+    position: absolute;
+    right: 0px;
+    top: 0px
+}
+@import url(https://fonts.googleapis.com/css?family=Oswald:400);
+
+span {
+    cursor: pointer;
+}
+.navigation {
+  width: 100%;
+  background-color: black;
+}
+
+.logout {
+  font-size: .8em;
+  font-family: 'Oswald', sans-serif;
+	position: relative;
+  overflow: hidden;
+  letter-spacing: 3px;
+  opacity: 0;
+  transition: opacity .45s;
+}
+
+.button {
+  text-decoration: none;
+  float: right;
+  padding: 3px 10px 3px 10px;
+  color: white;
+  width: 25px;
+  padding-left: 20px;
+
+  background-color: #21262c;
+  transition: width .35s;
+  -webkit-transition: width .35s;
+  overflow: hidden
+}
+
+span:hover {
+  width: 100px;
+}
+
+span:hover .logout{
+  opacity: .9;
+}
+
+.logout-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
