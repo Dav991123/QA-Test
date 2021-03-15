@@ -8,7 +8,6 @@ import './index.css';
 
 const QuestionResult = ({answers}) => {
     const [isSendMessage, setIsSendMessage] = useState(false);
-
     const { dispatch, state } = useContext(QuizContext);
     const [questionId, setQuestionId] = useState(null);
     const { exactQuestion, questions, timer } = state;
@@ -42,6 +41,7 @@ const QuestionResult = ({answers}) => {
         return null
     };
 
+
     const renderQuestionInfo = (currentId, selectedOption, question) => {
         const handleSetClassName = (index) => {
             let className;
@@ -58,14 +58,30 @@ const QuestionResult = ({answers}) => {
             <div 
                 className="question-info-content"
             >
+            {renderComment(currentId,  question.comment)}
            
             <div className={'question-info-desktop'}>
                 <div>
-                    {
-                        question.questionData && question.questionData 
-                        
-                    }
+                    {/* {
+                        question.questionData && (
+                            <img
+                                width="300"
+                                alt="img"
+                            />
+                        )
+                    } */}
                     <h2>{question.quizDescription}</h2>     
+                    <ol>
+                        {
+                            question.answerList.map((item, index) => {
+                                return (
+                                    <li className={handleSetClassName(index)}>
+                                        {item}
+                                    </li>
+                                )
+                            })
+                        }
+                    </ol>               
                 </div>
             </div>
             </div>
@@ -80,6 +96,16 @@ const QuestionResult = ({answers}) => {
                     key={question.id} 
                     className={`${question.correct_answer.includes(+answer.answer) ? 'correct' : 'failed'} `}
                 >   
+                    {
+                        questionId !== answer.questionId && question.comment &&  (
+                            <button 
+                            className={'btn-question-info question-icon-info'}
+                            onClick={() => setQuestionId(question.id)}
+                        >
+                            <i className="fa fa-info-circle" ></i>
+                        </button>
+                        )
+                    }
                  
                     <div className="count_icon">
                         <span>{question.id}</span>

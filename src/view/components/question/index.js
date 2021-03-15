@@ -17,9 +17,9 @@ const Question = ({quizDescription, questionData}) => {
             <div 
                 className='question-code-editor' 
             >
-                    {
-                      questionData
-                    }
+            {
+                questionData
+            }
             </div>
            
             <div className="quiz_description_content">
